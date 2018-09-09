@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PSYCHIC GAME</title>
+
+    <h1> WELCOME TO THE PSYCHIC GAME</h1>
+    <h2>INSTRUCTIONS: </h2>
+    <h3>YOU HAVE 5 CHANCES TO GUESS THE LETTER. IF YOU DONT GUESS, YOU LOSE</h3>
+    <h4> Start guessing! </h4>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+
+// choose secret letter
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+//rNum will return a value from 0 to 25
+var rNum = Math.floor(Math.random()*alphabet.length);
+//rLetter will return the letter in rNum position of the alphabet string, from a=0 to z=25
+var rLetter = alphabet[rNum];
+
+console.log(rNum);
+console.log(rLetter);
+
+
+
+//user input
+
+
+for (i=0;i<5;i=i+1){
+
+    var userGuess = prompt("what's your guess?");
+    var wins=0;
+    var loss=0;
+    if (rLetter == userGuess){
+        document.write("You guessed correctly");
+        wins = wins+1;
+        break;
+    }
+    else{
+    
+    }
+    loss = loss+1;
+}
+document.write("YOUR WINS: " + wins + "     ");
+document.write("YOUR LOSSES: " + loss);
+
+//** choose user letter
+//function myFunction(event){
+//var userInput= event.key();
+//console.log(userInput);
+//}
+//myFunction(); 
+// **//
+
+
+</script>
+
+
+</body>
+</html>
